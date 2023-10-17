@@ -14,28 +14,29 @@ struct FilterView: View {
     var body: some View {
         VStack {
             Text("Lowpass Filter")
+                .frame(maxWidth: .infinity)
+                .background(.white)
                 .padding(0)
             HStack {
                 VStack {
-                    Text("Cutoff")
-                        .padding(.top, 10)
-                    SmallKnob(value: $synthesizer.cutoff, range: 12.0...20_000)
-                        .frame(maxWidth: 50)
-                        .padding(.bottom, 10)
+                    ArcKnob("CTF", value: $synthesizer.cutoff, range: 12.0...20_000)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: 75, maxHeight: 75)
+                        .padding(.bottom, 5)
                 }
                 .padding(.trailing, 10)
                 VStack {
-                    Text("Resonance")
-                        .padding(.top, 10)
-                    SmallKnob(value: $synthesizer.resonance, range: 0.0...0.9)
-                        .frame(maxWidth: 50)
-                        .padding(.bottom, 10)
+                    ArcKnob("RES", value: $synthesizer.resonance, range: 0.0...0.9)
+                        .foregroundColor(.white)
+                        .frame(maxWidth: 75, maxHeight: 75)
+                        .padding(.bottom, 5)
                 }
                 .padding(.leading, 10)
             }
             .padding(0)
         }
-        .padding()
+        .frame(maxWidth: 150)
+        .padding(5)
         .background(.green)
         .cornerRadius(10)
         .overlay(
