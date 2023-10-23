@@ -1,8 +1,8 @@
 //
-//  OscillatorData.swift
+//  EnvOscillatorData.swift
 //  SimpleSynth
 //
-//  Created by Tim Gourley on 10/10/23.
+//  Created by Tim Gourley on 11/13/23.
 //
 
 import Foundation
@@ -12,7 +12,7 @@ import SoundpipeAudioKit
 // This class assumes a finite number of oscillators. Three is a good choice
 // as it is a number often used by hardware/software synthesizers to achieve
 // a wide pallate of different sounds with subtractive synthesis.
-struct OscillatorData {
+struct EnvOscillatorData {
     // MARK: - Default Settings
     // Define the defaults for our oscillator waveforms
     // as well as give callers the ability to change the
@@ -57,9 +57,6 @@ struct OscillatorData {
     ]
     
     // MARK: - Other settings
-    // Is the engine playing any sound?
-    var isPlaying: Bool = false
-    
     // Ramp speed between notes
     // This is known as glide or portamento
     var rampDuration: AUValue = 0.0

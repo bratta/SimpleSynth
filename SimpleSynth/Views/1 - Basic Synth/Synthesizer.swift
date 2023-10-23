@@ -2,7 +2,7 @@
 //  Synthesizer.swift
 //  SimpleSynth
 //
-//  Created by Tim Gourley on 10/10/23.
+//  Created by Tim Gourley on 11/13/23.
 //
 
 import Foundation
@@ -11,11 +11,12 @@ import Keyboard
 import Tonic
 import SoundpipeAudioKit
 import Controls
+import DunneAudioKit
 
 // Defines a simple, 3 oscillator analog style synthesizer
 // Note that the number of oscillators can change solely by
 // updating the OscillatorData class.
-class Synthesizer: ObservableObject {
+class Synthesizer: SynthesizerProtocol {
     // MARK: - Properties
     // This is the actual audio engine
     private let engine = AudioEngine()
@@ -27,11 +28,15 @@ class Synthesizer: ObservableObject {
     // The Moog filter is known for a certain sound and this does a decent
     // job of emulating that behavior.
     lazy var filter = MoogLadder(mixer, cutoffFrequency: OscillatorData.defaultCutoff, resonance: OscillatorData.defaultResonance)
+    
+    // These aren't used by this version of the SynthesizerProtocol; ignore for now
+    @Published var envelope: AmplitudeEnvelope!
+    @Published var attack: AUValue = 0.0
+    @Published var decay: AUValue = 0.0
+    @Published var sustain: AUValue = 1.0
+    @Published var release: AUValue = 0.0
    
     // MARK: - Published properties
-    // Used to control the current octave of the synth's on-screen keyboard
-    @Published var octaveOffset = 0
-   
     // Settings shared across all oscillators
     @Published var data = OscillatorData() {
         didSet {
@@ -60,6 +65,9 @@ class Synthesizer: ObservableObject {
         }
     }
    
+    // Define the range of valid values for the filter cutoff
+    @Published var cutoffRange: ClosedRange<Float> = 12.0 ... 20000.0
+   
     // The filter's resonance value
     // This introduces a boost in the frequencies right before the
     // filter's cutoff, resulting in some interesting sounds. It
@@ -70,6 +78,9 @@ class Synthesizer: ObservableObject {
             filter.resonance = AUValue(resonance)
         }
     }
+   
+    // Define the range of valid values for the filter resonance
+    @Published var resonanceRange: ClosedRange<Float> = 0.0 ... 0.9
    
     // MARK: - Initializer
     init() {

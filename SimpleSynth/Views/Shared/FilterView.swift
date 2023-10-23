@@ -8,25 +8,26 @@
 import SwiftUI
 import Controls
 
-struct FilterView: View {
-    @StateObject var synthesizer: Synthesizer
+struct FilterView<SP: SynthesizerProtocol>: View {
+    @StateObject var synthesizer: SP
     
     var body: some View {
         VStack {
             Text("Lowpass Filter")
+                .foregroundStyle(Color.black)
                 .frame(maxWidth: .infinity)
                 .background(.white)
                 .padding(0)
             HStack {
                 VStack {
-                    ArcKnob("CTF", value: $synthesizer.cutoff, range: 12.0...20_000)
+                    ArcKnob("CTF", value: $synthesizer.cutoff, range: synthesizer.cutoffRange)
                         .foregroundColor(.white)
                         .frame(maxWidth: 75, maxHeight: 75)
                         .padding(.bottom, 5)
                 }
                 .padding(.trailing, 10)
                 VStack {
-                    ArcKnob("RES", value: $synthesizer.resonance, range: 0.0...0.9)
+                    ArcKnob("RES", value: $synthesizer.resonance, range: synthesizer.resonanceRange)
                         .foregroundColor(.white)
                         .frame(maxWidth: 75, maxHeight: 75)
                         .padding(.bottom, 5)
@@ -47,5 +48,5 @@ struct FilterView: View {
 }
 
 #Preview {
-    FilterView(synthesizer: Synthesizer())
+    FilterView(synthesizer: EnvSynthesizer())
 }

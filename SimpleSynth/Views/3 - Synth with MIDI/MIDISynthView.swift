@@ -12,19 +12,21 @@ import Tonic
 import SoundpipeAudioKit
 import Controls
 
-struct SynthView: View {
-    @StateObject var synthesizer = Synthesizer()
+struct MIDISynthView: View {
+    @StateObject var synthesizer = MIDISynthesizer()
+    @StateObject var octave = Octave()
    
     var body: some View {
         ZStack {
             BackgroundView()
             VStack(spacing: 0) {
                 Spacer()
-                FilterView(synthesizer: synthesizer)
+                WaveformView(synthesizer.instrument)
+                    .frame(width: 300, height: 200)
                     .padding(.bottom, 10)
-                OctaveView(synthesizer: synthesizer)
+                OctaveView(octave: octave)
                 KeyboardView(
-                    octaveOffset: synthesizer.octaveOffset,
+                    octaveOffset: octave.offset,
                     noteOn: synthesizer.noteOn(pitch:point:),
                     noteOff: synthesizer.noteOff
                 )
@@ -36,5 +38,5 @@ struct SynthView: View {
 }
 
 #Preview {
-    SynthView()
+    MIDISynthView()
 }

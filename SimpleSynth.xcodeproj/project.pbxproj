@@ -7,6 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		221FCD162B0414E00034974C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FCD152B0414E00034974C /* Instrument.swift */; };
+		2236AD922B052D3E009F44D9 /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = 2236AD912B052D3E009F44D9 /* Samples */; };
+		2236AD992B053392009F44D9 /* Octave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236AD982B053392009F44D9 /* Octave.swift */; };
+		223B3BC92B02BE4E00688043 /* SynthesizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BC82B02BE4E00688043 /* SynthesizerProtocol.swift */; };
+		223B3BCB2B02C76C00688043 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BCA2B02C76C00688043 /* SynthView.swift */; };
+		223B3BCD2B02C77F00688043 /* OscillatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BCC2B02C77F00688043 /* OscillatorData.swift */; };
+		223B3BCF2B02C78C00688043 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BCE2B02C78C00688043 /* Synthesizer.swift */; };
+		223B3BD12B02CFBD00688043 /* EnvSynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BD02B02CFBD00688043 /* EnvSynthView.swift */; };
+		223B3BD32B02CFF300688043 /* EnvSynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BD22B02CFF300688043 /* EnvSynthesizer.swift */; };
+		223B3BD52B02D0D100688043 /* EnvOscillatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BD42B02D0D100688043 /* EnvOscillatorData.swift */; };
+		2240AE842AE6B3F1004EFAF8 /* AmpEnvelopeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240AE832AE6B3F1004EFAF8 /* AmpEnvelopeView.swift */; };
+		2240AE862AE6F52D004EFAF8 /* WaveformView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240AE852AE6F52D004EFAF8 /* WaveformView.swift */; };
+		2240AE892AE6FA2F004EFAF8 /* AudioKitUI in Frameworks */ = {isa = PBXBuildFile; productRef = 2240AE882AE6FA2F004EFAF8 /* AudioKitUI */; };
+		2240AE8B2AE6FE65004EFAF8 /* MIDISynthesizer+MIDI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2240AE8A2AE6FE65004EFAF8 /* MIDISynthesizer+MIDI.swift */; };
 		22AD30472AD5DBEE002FB295 /* MIDIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD30462AD5DBEE002FB295 /* MIDIHelper.swift */; };
 		22AD30492AD5E332002FB295 /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD30482AD5E332002FB295 /* BackgroundView.swift */; };
 		22AD304B2AD5EA55002FB295 /* KeyboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22AD304A2AD5EA55002FB295 /* KeyboardView.swift */; };
@@ -23,9 +37,10 @@
 		22F40E602AD5A2C000885B78 /* Controls in Frameworks */ = {isa = PBXBuildFile; productRef = 22F40E5F2AD5A2C000885B78 /* Controls */; };
 		22F40E632AD5A2D600885B78 /* Keyboard in Frameworks */ = {isa = PBXBuildFile; productRef = 22F40E622AD5A2D600885B78 /* Keyboard */; };
 		22F40E662AD5A30800885B78 /* SoundpipeAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22F40E652AD5A30800885B78 /* SoundpipeAudioKit */; };
-		22F40E6A2AD5A4AD00885B78 /* OscillatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E692AD5A4AD00885B78 /* OscillatorData.swift */; };
-		22F40E6C2AD5A55400885B78 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E6B2AD5A55400885B78 /* SynthView.swift */; };
-		22F40E6E2AD5A5E900885B78 /* Synthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E6D2AD5A5E900885B78 /* Synthesizer.swift */; };
+		22F40E6A2AD5A4AD00885B78 /* MIDIOscillatorData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E692AD5A4AD00885B78 /* MIDIOscillatorData.swift */; };
+		22F40E6C2AD5A55400885B78 /* MIDISynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E6B2AD5A55400885B78 /* MIDISynthView.swift */; };
+		22F40E6E2AD5A5E900885B78 /* MIDISynthesizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F40E6D2AD5A5E900885B78 /* MIDISynthesizer.swift */; };
+		22FCE6242AE842B200A1E73F /* DunneAudioKit in Frameworks */ = {isa = PBXBuildFile; productRef = 22FCE6232AE842B200A1E73F /* DunneAudioKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +61,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		221FCD152B0414E00034974C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
+		2236AD912B052D3E009F44D9 /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Samples; path = SimpleSynth/Samples; sourceTree = "<group>"; };
+		2236AD982B053392009F44D9 /* Octave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Octave.swift; sourceTree = "<group>"; };
+		223B3BC82B02BE4E00688043 /* SynthesizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesizerProtocol.swift; sourceTree = "<group>"; };
+		223B3BCA2B02C76C00688043 /* SynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
+		223B3BCC2B02C77F00688043 /* OscillatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscillatorData.swift; sourceTree = "<group>"; };
+		223B3BCE2B02C78C00688043 /* Synthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
+		223B3BD02B02CFBD00688043 /* EnvSynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvSynthView.swift; sourceTree = "<group>"; };
+		223B3BD22B02CFF300688043 /* EnvSynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvSynthesizer.swift; sourceTree = "<group>"; };
+		223B3BD42B02D0D100688043 /* EnvOscillatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnvOscillatorData.swift; sourceTree = "<group>"; };
+		2240AE832AE6B3F1004EFAF8 /* AmpEnvelopeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmpEnvelopeView.swift; sourceTree = "<group>"; };
+		2240AE852AE6F52D004EFAF8 /* WaveformView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveformView.swift; sourceTree = "<group>"; };
+		2240AE8A2AE6FE65004EFAF8 /* MIDISynthesizer+MIDI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MIDISynthesizer+MIDI.swift"; sourceTree = "<group>"; };
 		22AD30462AD5DBEE002FB295 /* MIDIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIHelper.swift; sourceTree = "<group>"; };
 		22AD30482AD5E332002FB295 /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		22AD304A2AD5EA55002FB295 /* KeyboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardView.swift; sourceTree = "<group>"; };
@@ -62,9 +90,9 @@
 		22F40E482AD5A14D00885B78 /* SimpleSynthUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleSynthUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		22F40E4C2AD5A14D00885B78 /* SimpleSynthUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSynthUITests.swift; sourceTree = "<group>"; };
 		22F40E4E2AD5A14D00885B78 /* SimpleSynthUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleSynthUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		22F40E692AD5A4AD00885B78 /* OscillatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OscillatorData.swift; sourceTree = "<group>"; };
-		22F40E6B2AD5A55400885B78 /* SynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
-		22F40E6D2AD5A5E900885B78 /* Synthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Synthesizer.swift; sourceTree = "<group>"; };
+		22F40E692AD5A4AD00885B78 /* MIDIOscillatorData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDIOscillatorData.swift; sourceTree = "<group>"; };
+		22F40E6B2AD5A55400885B78 /* MIDISynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISynthView.swift; sourceTree = "<group>"; };
+		22F40E6D2AD5A5E900885B78 /* MIDISynthesizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MIDISynthesizer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,9 +101,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F40E632AD5A2D600885B78 /* Keyboard in Frameworks */,
+				2240AE892AE6FA2F004EFAF8 /* AudioKitUI in Frameworks */,
 				22F40E602AD5A2C000885B78 /* Controls in Frameworks */,
 				22F40E662AD5A30800885B78 /* SoundpipeAudioKit in Frameworks */,
 				22F40E5D2AD5A2AC00885B78 /* AudioKit in Frameworks */,
+				22FCE6242AE842B200A1E73F /* DunneAudioKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +126,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		223B3BC42B02BB6600688043 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				22F40E322AD5A14C00885B78 /* ContentView.swift */,
+				22AD30482AD5E332002FB295 /* BackgroundView.swift */,
+				22AD304A2AD5EA55002FB295 /* KeyboardView.swift */,
+				22E669AD2ADEBF4F00291A4F /* OctaveView.swift */,
+				22E669AB2ADEBC4800291A4F /* FilterView.swift */,
+				2240AE832AE6B3F1004EFAF8 /* AmpEnvelopeView.swift */,
+				2240AE852AE6F52D004EFAF8 /* WaveformView.swift */,
+				223B3BC82B02BE4E00688043 /* SynthesizerProtocol.swift */,
+				221FCD152B0414E00034974C /* Instrument.swift */,
+				2236AD982B053392009F44D9 /* Octave.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		223B3BC52B02BBA000688043 /* 1 - Basic Synth */ = {
+			isa = PBXGroup;
+			children = (
+				223B3BCA2B02C76C00688043 /* SynthView.swift */,
+				223B3BCC2B02C77F00688043 /* OscillatorData.swift */,
+				223B3BCE2B02C78C00688043 /* Synthesizer.swift */,
+			);
+			path = "1 - Basic Synth";
+			sourceTree = "<group>";
+		};
+		223B3BC62B02BBB000688043 /* 2 - Synth with Envelope */ = {
+			isa = PBXGroup;
+			children = (
+				223B3BD02B02CFBD00688043 /* EnvSynthView.swift */,
+				223B3BD42B02D0D100688043 /* EnvOscillatorData.swift */,
+				223B3BD22B02CFF300688043 /* EnvSynthesizer.swift */,
+			);
+			path = "2 - Synth with Envelope";
+			sourceTree = "<group>";
+		};
+		223B3BC72B02BBBD00688043 /* 3 - Synth with MIDI */ = {
+			isa = PBXGroup;
+			children = (
+				22F40E6B2AD5A55400885B78 /* MIDISynthView.swift */,
+				22F40E692AD5A4AD00885B78 /* MIDIOscillatorData.swift */,
+				22F40E6D2AD5A5E900885B78 /* MIDISynthesizer.swift */,
+				2240AE8A2AE6FE65004EFAF8 /* MIDISynthesizer+MIDI.swift */,
+			);
+			path = "3 - Synth with MIDI";
+			sourceTree = "<group>";
+		};
 		22AD30452AD5DBCD002FB295 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +186,7 @@
 			isa = PBXGroup;
 			children = (
 				22F40E2F2AD5A14C00885B78 /* SimpleSynth */,
+				2236AD912B052D3E009F44D9 /* Samples */,
 				22F40E412AD5A14D00885B78 /* SimpleSynthTests */,
 				22F40E4B2AD5A14D00885B78 /* SimpleSynthUITests */,
 				22F40E2E2AD5A14C00885B78 /* Products */,
@@ -129,7 +208,6 @@
 			children = (
 				22AD30452AD5DBCD002FB295 /* Helpers */,
 				22F40E682AD5A3FE00885B78 /* Views */,
-				22F40E672AD5A3F200885B78 /* Models */,
 				22F40E302AD5A14C00885B78 /* SimpleSynthApp.swift */,
 				22F40E342AD5A14D00885B78 /* Assets.xcassets */,
 				22F40E362AD5A14D00885B78 /* SimpleSynth.entitlements */,
@@ -163,24 +241,13 @@
 			path = SimpleSynthUITests;
 			sourceTree = "<group>";
 		};
-		22F40E672AD5A3F200885B78 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				22F40E692AD5A4AD00885B78 /* OscillatorData.swift */,
-				22F40E6D2AD5A5E900885B78 /* Synthesizer.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		22F40E682AD5A3FE00885B78 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				22F40E322AD5A14C00885B78 /* ContentView.swift */,
-				22F40E6B2AD5A55400885B78 /* SynthView.swift */,
-				22AD30482AD5E332002FB295 /* BackgroundView.swift */,
-				22AD304A2AD5EA55002FB295 /* KeyboardView.swift */,
-				22E669AB2ADEBC4800291A4F /* FilterView.swift */,
-				22E669AD2ADEBF4F00291A4F /* OctaveView.swift */,
+				223B3BC52B02BBA000688043 /* 1 - Basic Synth */,
+				223B3BC62B02BBB000688043 /* 2 - Synth with Envelope */,
+				223B3BC72B02BBBD00688043 /* 3 - Synth with MIDI */,
+				223B3BC42B02BB6600688043 /* Shared */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -206,6 +273,8 @@
 				22F40E5F2AD5A2C000885B78 /* Controls */,
 				22F40E622AD5A2D600885B78 /* Keyboard */,
 				22F40E652AD5A30800885B78 /* SoundpipeAudioKit */,
+				2240AE882AE6FA2F004EFAF8 /* AudioKitUI */,
+				22FCE6232AE842B200A1E73F /* DunneAudioKit */,
 			);
 			productName = SimpleSynth;
 			productReference = 22F40E2D2AD5A14C00885B78 /* SimpleSynth.app */;
@@ -284,6 +353,8 @@
 				22F40E5E2AD5A2C000885B78 /* XCRemoteSwiftPackageReference "Controls" */,
 				22F40E612AD5A2D600885B78 /* XCRemoteSwiftPackageReference "Keyboard" */,
 				22F40E642AD5A30800885B78 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */,
+				2240AE872AE6FA2F004EFAF8 /* XCRemoteSwiftPackageReference "AudioKitUI" */,
+				22FCE6222AE842B200A1E73F /* XCRemoteSwiftPackageReference "DunneAudioKit" */,
 			);
 			productRefGroup = 22F40E2E2AD5A14C00885B78 /* Products */;
 			projectDirPath = "";
@@ -301,6 +372,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2236AD922B052D3E009F44D9 /* Samples in Resources */,
 				22F40E392AD5A14D00885B78 /* Preview Assets.xcassets in Resources */,
 				22F40E352AD5A14D00885B78 /* Assets.xcassets in Resources */,
 			);
@@ -327,16 +399,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				223B3BC92B02BE4E00688043 /* SynthesizerProtocol.swift in Sources */,
 				22E669AE2ADEBF4F00291A4F /* OctaveView.swift in Sources */,
+				223B3BCF2B02C78C00688043 /* Synthesizer.swift in Sources */,
 				22AD30472AD5DBEE002FB295 /* MIDIHelper.swift in Sources */,
 				22AD304B2AD5EA55002FB295 /* KeyboardView.swift in Sources */,
-				22F40E6E2AD5A5E900885B78 /* Synthesizer.swift in Sources */,
+				22F40E6E2AD5A5E900885B78 /* MIDISynthesizer.swift in Sources */,
+				223B3BCD2B02C77F00688043 /* OscillatorData.swift in Sources */,
+				221FCD162B0414E00034974C /* Instrument.swift in Sources */,
+				2236AD992B053392009F44D9 /* Octave.swift in Sources */,
+				223B3BD52B02D0D100688043 /* EnvOscillatorData.swift in Sources */,
+				223B3BD32B02CFF300688043 /* EnvSynthesizer.swift in Sources */,
 				22F40E332AD5A14C00885B78 /* ContentView.swift in Sources */,
 				22E669AC2ADEBC4800291A4F /* FilterView.swift in Sources */,
+				2240AE842AE6B3F1004EFAF8 /* AmpEnvelopeView.swift in Sources */,
+				2240AE8B2AE6FE65004EFAF8 /* MIDISynthesizer+MIDI.swift in Sources */,
 				22AD30492AD5E332002FB295 /* BackgroundView.swift in Sources */,
-				22F40E6A2AD5A4AD00885B78 /* OscillatorData.swift in Sources */,
+				223B3BD12B02CFBD00688043 /* EnvSynthView.swift in Sources */,
+				223B3BCB2B02C76C00688043 /* SynthView.swift in Sources */,
+				22F40E6A2AD5A4AD00885B78 /* MIDIOscillatorData.swift in Sources */,
 				22F40E312AD5A14C00885B78 /* SimpleSynthApp.swift in Sources */,
-				22F40E6C2AD5A55400885B78 /* SynthView.swift in Sources */,
+				22F40E6C2AD5A55400885B78 /* MIDISynthView.swift in Sources */,
+				2240AE862AE6F52D004EFAF8 /* WaveformView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -493,13 +577,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleSynth/SimpleSynth.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleSynth/Preview Content\"";
-				DEVELOPMENT_TEAM = 4965964PZN;
+				DEVELOPMENT_TEAM = 3X7YGW6S68;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleSynth;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -515,7 +602,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timgourley.SimpleSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timgourley.SimpleSynthWithMidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -531,13 +618,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = SimpleSynth/SimpleSynth.entitlements;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "-";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"SimpleSynth/Preview Content\"";
-				DEVELOPMENT_TEAM = 4965964PZN;
+				DEVELOPMENT_TEAM = 3X7YGW6S68;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = SimpleSynth;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents[sdk=iphoneos*]" = YES;
@@ -553,7 +643,7 @@
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 13.5;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.timgourley.SimpleSynth;
+				PRODUCT_BUNDLE_IDENTIFIER = com.timgourley.SimpleSynthWithMidi;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
@@ -695,6 +785,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		2240AE872AE6FA2F004EFAF8 /* XCRemoteSwiftPackageReference "AudioKitUI" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/AudioKitUI.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.6;
+			};
+		};
 		22F40E5B2AD5A2AC00885B78 /* XCRemoteSwiftPackageReference "AudioKit" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/AudioKit/AudioKit.git";
@@ -727,9 +825,22 @@
 				minimumVersion = 5.6.1;
 			};
 		};
+		22FCE6222AE842B200A1E73F /* XCRemoteSwiftPackageReference "DunneAudioKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AudioKit/DunneAudioKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.6.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		2240AE882AE6FA2F004EFAF8 /* AudioKitUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 2240AE872AE6FA2F004EFAF8 /* XCRemoteSwiftPackageReference "AudioKitUI" */;
+			productName = AudioKitUI;
+		};
 		22F40E5C2AD5A2AC00885B78 /* AudioKit */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 22F40E5B2AD5A2AC00885B78 /* XCRemoteSwiftPackageReference "AudioKit" */;
@@ -749,6 +860,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 22F40E642AD5A30800885B78 /* XCRemoteSwiftPackageReference "SoundpipeAudioKit" */;
 			productName = SoundpipeAudioKit;
+		};
+		22FCE6232AE842B200A1E73F /* DunneAudioKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 22FCE6222AE842B200A1E73F /* XCRemoteSwiftPackageReference "DunneAudioKit" */;
+			productName = DunneAudioKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

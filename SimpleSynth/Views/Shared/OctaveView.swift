@@ -8,19 +8,19 @@
 import SwiftUI
 
 struct OctaveView: View {
-    @StateObject var synthesizer: Synthesizer
+    @StateObject var octave = Octave()
     
     var body: some View {
         VStack {
             HStack {
-                Button(action: { synthesizer.octaveOffset = max(-2, synthesizer.octaveOffset-1) }) {
+                Button(action: { octave.offset = max(-2, octave.offset-1) }) {
                     Image(systemName: "arrowtriangle.backward.fill")
                         .foregroundColor(.white)
                 }
-                Text("Octave: \(synthesizer.octaveOffset)")
+                Text("Octave: \(octave.offset)")
                     .frame(maxWidth: 150)
                     .foregroundColor(.white)
-                Button(action: { synthesizer.octaveOffset = min(4, synthesizer.octaveOffset+1) }) {
+                Button(action: { octave.offset = min(4, octave.offset+1) }) {
                     Image(systemName: "arrowtriangle.forward.fill")
                         .foregroundColor(.white)
                 }
@@ -33,6 +33,7 @@ struct OctaveView: View {
     }
 }
 
+
 #Preview {
-    OctaveView(synthesizer: Synthesizer())
+    OctaveView()
 }
