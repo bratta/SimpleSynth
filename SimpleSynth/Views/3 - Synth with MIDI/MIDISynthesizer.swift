@@ -14,9 +14,6 @@ import SoundpipeAudioKit
 import Controls
 import DunneAudioKit
 
-// Defines a simple, 3 oscillator analog style synthesizer
-// Note that the number of oscillators can change solely by
-// updating the OscillatorData class.
 class MIDISynthesizer: ObservableObject {
     // MARK: - Properties
     // This is the actual audio engine
@@ -60,12 +57,10 @@ class MIDISynthesizer: ObservableObject {
     
     // MARK: - Public functions
     func noteOn(pitch: Pitch, point: CGPoint) {
-        //synth.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: MIDIVelocity.max)
         instrument.play(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), velocity: MIDIVelocity.max, channel: 0)
     }
     
     func noteOff(pitch: Pitch) {
-        //synth.stop(noteNumber: MIDINoteNumber(pitch.midiNoteNumber))
         instrument.stop(noteNumber: MIDINoteNumber(pitch.midiNoteNumber), channel: 0)
     }
 
@@ -76,12 +71,21 @@ class MIDISynthesizer: ObservableObject {
     func handleMidiCC(_ controller: UInt8, value: UInt8, channel: UInt8) {
         switch(Int(controller)) {
         // Mod wheel
-//        case 1:
-//            // Just using the value adds way too much vibrato;
-//            // This is a good case for having a setting.
-//            synth.vibratoDepth = AUValue(value/8)
+        case 1:
+            instrument.midiCC(controller, value: value, channel: channel)
+        // You can do different things with other CC values, such
+        // as having MIDI CC 74 control volume, etc.
+        // Feel free to explore this as you wish.
+        case 74:
+            let newVol = scale(Int(value), inMin: 0, inMax: 127, outMin: -45, outMax: 12)
+            instrument.amplitude = AUValue(newVol)
         default: break;
         }
+    }
+   
+    // A quick and dirty method to scale two range of numbers
+    private func scale(_ number: Int, inMin: Int, inMax: Int, outMin: Int, outMax: Int) -> Int {
+        return (number - inMin) * (outMax - outMin) / (inMax - inMin) + outMin;
     }
 }
 
