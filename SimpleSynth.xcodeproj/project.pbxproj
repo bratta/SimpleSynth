@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		221FCD162B0414E00034974C /* Instrument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 221FCD152B0414E00034974C /* Instrument.swift */; };
-		2236AD922B052D3E009F44D9 /* Samples in Resources */ = {isa = PBXBuildFile; fileRef = 2236AD912B052D3E009F44D9 /* Samples */; };
+		222C129E2B055E7100DE8772 /* Sounds in Resources */ = {isa = PBXBuildFile; fileRef = 222C129D2B055E7100DE8772 /* Sounds */; };
 		2236AD992B053392009F44D9 /* Octave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2236AD982B053392009F44D9 /* Octave.swift */; };
 		223B3BC92B02BE4E00688043 /* SynthesizerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BC82B02BE4E00688043 /* SynthesizerProtocol.swift */; };
 		223B3BCB2B02C76C00688043 /* SynthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 223B3BCA2B02C76C00688043 /* SynthView.swift */; };
@@ -62,7 +62,8 @@
 
 /* Begin PBXFileReference section */
 		221FCD152B0414E00034974C /* Instrument.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Instrument.swift; sourceTree = "<group>"; };
-		2236AD912B052D3E009F44D9 /* Samples */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Samples; path = SimpleSynth/Samples; sourceTree = "<group>"; };
+		222C129C2B055BA400DE8772 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		222C129D2B055E7100DE8772 /* Sounds */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Sounds; sourceTree = "<group>"; };
 		2236AD982B053392009F44D9 /* Octave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Octave.swift; sourceTree = "<group>"; };
 		223B3BC82B02BE4E00688043 /* SynthesizerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthesizerProtocol.swift; sourceTree = "<group>"; };
 		223B3BCA2B02C76C00688043 /* SynthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SynthView.swift; sourceTree = "<group>"; };
@@ -186,7 +187,8 @@
 			isa = PBXGroup;
 			children = (
 				22F40E2F2AD5A14C00885B78 /* SimpleSynth */,
-				2236AD912B052D3E009F44D9 /* Samples */,
+				222C129D2B055E7100DE8772 /* Sounds */,
+				22AD30452AD5DBCD002FB295 /* Helpers */,
 				22F40E412AD5A14D00885B78 /* SimpleSynthTests */,
 				22F40E4B2AD5A14D00885B78 /* SimpleSynthUITests */,
 				22F40E2E2AD5A14C00885B78 /* Products */,
@@ -206,11 +208,11 @@
 		22F40E2F2AD5A14C00885B78 /* SimpleSynth */ = {
 			isa = PBXGroup;
 			children = (
-				22AD30452AD5DBCD002FB295 /* Helpers */,
 				22F40E682AD5A3FE00885B78 /* Views */,
 				22F40E302AD5A14C00885B78 /* SimpleSynthApp.swift */,
 				22F40E342AD5A14D00885B78 /* Assets.xcassets */,
 				22F40E362AD5A14D00885B78 /* SimpleSynth.entitlements */,
+				222C129C2B055BA400DE8772 /* Info.plist */,
 				22F40E372AD5A14D00885B78 /* Preview Content */,
 			);
 			path = SimpleSynth;
@@ -372,7 +374,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2236AD922B052D3E009F44D9 /* Samples in Resources */,
+				222C129E2B055E7100DE8772 /* Sounds in Resources */,
 				22F40E392AD5A14D00885B78 /* Preview Assets.xcassets in Resources */,
 				22F40E352AD5A14D00885B78 /* Assets.xcassets in Resources */,
 			);
@@ -585,6 +587,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleSynth/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SimpleSynth;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
@@ -626,6 +629,7 @@
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = SimpleSynth/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = SimpleSynth;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.music";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;

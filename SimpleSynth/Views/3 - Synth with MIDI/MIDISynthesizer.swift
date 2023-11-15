@@ -37,7 +37,7 @@ class MIDISynthesizer: ObservableObject {
         do {
             // This sampled instrument was created in Logic Pro, sampled from my Hydrasynth Deluxe
             // with the "Suitcase MK2 RA" preset
-            if let sampleURL = Bundle.main.url(forResource: "Samples/hydrasynth_mk2", withExtension: "exs") {
+            if let sampleURL = Bundle.main.url(forResource: "Sounds/hydrasynth_mk2", withExtension: "exs") {
                 try instrument.loadInstrument(url: sampleURL)
             } else {
                 print("Cannot find the instrument file!")
